@@ -6,7 +6,7 @@ dark-blue - #134d71;
 white - #ffffff;
 black - #000000;
 */
-body {
+html {
   background: linear-gradient(180deg, #134d71, #78a7c6, #f7e4bf);
   font-family: 'Quicksand', sans-serif;
   min-height: 100vh;
@@ -37,7 +37,7 @@ section {
     padding-bottom: 1%;
     width: 50%;
     margin: auto;
-    margin-bottom: 9%;
+    margin-bottom: 4%;
     height: 20%;
 }
 
@@ -68,6 +68,7 @@ button {
     padding-right: 3%;
     font-size: medium;
     outline: none;
+    border:  #ffffff;
 }
 
 label {
@@ -80,4 +81,12 @@ label {
 div {
   display: flex;
   justify-content: space-between;
+}
+
+.create-own {
+    background: radial-gradient(circle, #134d71, #78a7c6, #f7e4bf);
+    margin-bottom: 5%;
+    width: 20%;
+    padding: 1%;
+    text-shadow: -1px 1px 2px #000, 1px 1px 2px #000, 1px -1px 0 #000, -1px -1px 0 #000;
 }
