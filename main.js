@@ -4,6 +4,9 @@ var displayedMessage = document.querySelector(".recieved-message");
 var affirmation = document.querySelector("#affirmation");
 var mantra = document.querySelector("#mantra");
 var clearButton = document.querySelector(".clear-message");
+var createOwnButton = document.querySelector(".create-own");
+var displayForm = document.querySelector(".create-own-message");
+var submitButton = document.querySelector(".submit");
 
 var affirmations = [
 "I forgive myself and set myself free.",
@@ -42,6 +45,7 @@ var mantras = [
 
 recieveMessageButton.addEventListener("click", showMessage);
 clearButton.addEventListener("click", clearMessage);
+createOwnButton.addEventListener("click", showOwnForm);
 
 function showMessage() {
   if (mantra.checked === false && affirmation.checked === false) {
@@ -68,6 +72,13 @@ function grabMessage (){
 function clearMessage() {
 showImage();
 };
+
+function showOwnForm() {
+  displayForm.classList.remove("hidden");
+  recieveMessageButton.classList.add("hidden");
+  showImage();
+
+}
 
 function showMessageClearButton() {
   meditationImage.classList.add("hidden");
