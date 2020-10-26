@@ -5,7 +5,8 @@ var affirmation = document.querySelector("#affirmation");
 var mantra = document.querySelector("#mantra");
 var clearButton = document.querySelector(".clear-message");
 
-var affirmations = ["I forgive myself and set myself free.",
+var affirmations = [
+"I forgive myself and set myself free.",
 "I believe I can be all that I want to be.",
 "I am in the process of becoming the best version of myself.",
 "I have the freedom & power to create the life I desire.",
@@ -20,7 +21,8 @@ var affirmations = ["I forgive myself and set myself free.",
 "I manifest perfect health by making smart choices.",
 ];
 
-var mantras = ["Breathing in, I send myself love.",
+var mantras = [
+"Breathing in, I send myself love.",
 "Breathing out, I send love to someone else who needs it.",
 "Don’t let yesterday take up too much of today.",
 "Every day is a second chance.",
