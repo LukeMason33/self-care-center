@@ -77,4 +77,4 @@ function showImage() {
   meditationImage.classList.remove("hidden");
   displayedMessage.classList.add("hidden");
   clearButton.classList.add("hidden");
-}
+};
