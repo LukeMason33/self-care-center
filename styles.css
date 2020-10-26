@@ -35,7 +35,7 @@ section {
     border-radius: 10px;
     padding-top: 1%;
     padding-bottom: 1%;
-    width: 40%;
+    width: 50%;
     margin: auto;
     margin-bottom: 9%;
     height: 20%;
@@ -67,11 +67,17 @@ button {
     padding-left: 3%;
     padding-right: 3%;
     font-size: medium;
+    outline: none;
 }
 
 label {
     padding-right: 15%;
-    padding-left: 15%;
+    padding-left: 10%;
     font-style: italic;
     font-size: large;
+}
+
+div {
+  display: flex;
+  justify-content: space-between;
 }
