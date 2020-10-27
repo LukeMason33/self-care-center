@@ -99,7 +99,7 @@ function exitForm() {
   showMessageClearButton();
   displayForm.classList.add("hidden");
   recieveMessageButton.classList.remove("hidden");
-}
+};
 
 function displayCustomMessage() {
   if (mantra.checked === false && affirmation.checked === false) {
