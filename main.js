@@ -7,6 +7,7 @@ var clearButton = document.querySelector(".clear-message");
 var createOwnButton = document.querySelector(".create-own");
 var displayForm = document.querySelector(".create-own-message");
 var submitButton = document.querySelector(".submit");
+var usersMessage = document.querySelector(".user-message");
 
 var affirmations = [
 "I forgive myself and set myself free.",
@@ -46,6 +47,7 @@ var mantras = [
 recieveMessageButton.addEventListener("click", showMessage);
 clearButton.addEventListener("click", clearMessage);
 createOwnButton.addEventListener("click", showOwnForm);
+submitButton.addEventListener("click", displayCustomMessage);
 
 function showMessage() {
   if (mantra.checked === false && affirmation.checked === false) {
@@ -70,15 +72,16 @@ function grabMessage (){
 };
 
 function clearMessage() {
-showImage();
+  showImage();
 };
 
 function showOwnForm() {
   displayForm.classList.remove("hidden");
   recieveMessageButton.classList.add("hidden");
+  usersMessage.value = null;
   showImage();
 
-}
+};
 
 function showMessageClearButton() {
   meditationImage.classList.add("hidden");
@@ -90,4 +93,16 @@ function showImage() {
   meditationImage.classList.remove("hidden");
   displayedMessage.classList.add("hidden");
   clearButton.classList.add("hidden");
+};
+
+function exitForm() {
+  showMessageClearButton();
+  displayForm.classList.add("hidden");
+  recieveMessageButton.classList.remove("hidden");
+}
+
+function displayCustomMessage() {
+  event.preventDefault();
+  exitForm();
+  displayedMessage.innerText = `${usersMessage.value}`;
 };
