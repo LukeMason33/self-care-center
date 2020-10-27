@@ -102,7 +102,22 @@ function exitForm() {
 }
 
 function displayCustomMessage() {
-  event.preventDefault();
-  exitForm();
-  displayedMessage.innerText = `${usersMessage.value}`;
+  if (mantra.checked === false && affirmation.checked === false) {
+    alert("If you want to display a message, choose a choice below.");
+  }
+  else {
+    event.preventDefault();
+    saveCustomIntoData();
+    exitForm();
+    displayedMessage.innerText = `${usersMessage.value}`;
+  }
+};
+
+function saveCustomIntoData() {
+  if (mantra.checked) {
+    mantras.push(usersMessage.value);
+  }
+  else if (affirmation.checked){
+    affirmations.push(usersMessage.value)
+  }
 };
